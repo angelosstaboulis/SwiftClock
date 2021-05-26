@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     }
     func updateUI(){
         date = Calendar.current.dateComponents(in:.current , from: Date())
-        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.01
+        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.1
         let minutesAngle = (CGFloat(date.minute!) / 60.0) * CGFloat.pi * 2.0
         let secondsAngle = (CGFloat(date.second!) / 60.0) * CGFloat.pi * 2.0
-        self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle))
+        self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle+(0.5)))
         self.minutesImage.transform = CGAffineTransform(rotationAngle: CGFloat(minutesAngle))
         self.secondsImage.transform = CGAffineTransform(rotationAngle: CGFloat(secondsAngle))
         if date.second! >= 0  && date.second!<=9 {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-            initClockHands()
+        initClockHands()
         fireTimer()
         
         
