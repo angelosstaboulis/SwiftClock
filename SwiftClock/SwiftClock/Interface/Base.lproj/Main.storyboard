@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbp-Jv-pH0">
+                                <rect key="frame" x="43" y="199" width="328" height="498"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="BR2-Ft-gg3">
+                                        <rect key="frame" x="20" y="32" width="288" height="458"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-MH-x6J">
+                                        <rect key="frame" x="0.0" y="430" width="328" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BR2-Ft-gg3" firstAttribute="leading" secondItem="Cbp-Jv-pH0" secondAttribute="leading" constant="20" id="C6i-Nu-dfg"/>
+                                    <constraint firstItem="BR2-Ft-gg3" firstAttribute="centerX" secondItem="Cbp-Jv-pH0" secondAttribute="centerX" id="cNC-Ak-1hY"/>
+                                    <constraint firstItem="BR2-Ft-gg3" firstAttribute="centerY" secondItem="Cbp-Jv-pH0" secondAttribute="centerY" constant="12" id="o69-Vh-0fX"/>
+                                    <constraint firstItem="BR2-Ft-gg3" firstAttribute="top" secondItem="Cbp-Jv-pH0" secondAttribute="top" constant="32" id="sMW-we-G2U"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand_hour" translatesAutoresizingMaskIntoConstraints="NO" id="wb0-fa-UES">
+                                <rect key="frame" x="191" y="364" width="33" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand_minute" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-pF-AXi">
+                                <rect key="frame" x="191" y="342" width="31" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand_second" translatesAutoresizingMaskIntoConstraints="NO" id="Vcj-n4-fw7">
+                                <rect key="frame" x="191" y="334" width="38" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftClock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heb-4R-LOO">
+                                <rect key="frame" x="149" y="80" width="116.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cbp-Jv-pH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="DxK-MV-1d5"/>
+                            <constraint firstItem="heb-4R-LOO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="JeR-XG-kMG"/>
+                            <constraint firstItem="Cbp-Jv-pH0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qds-nq-x6k"/>
+                            <constraint firstItem="Cbp-Jv-pH0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFu-4i-Szj"/>
+                            <constraint firstItem="heb-4R-LOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZUD-1t-QI2"/>
+                            <constraint firstItem="Cbp-Jv-pH0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="155" id="a20-xW-ASJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hourImage" destination="wb0-fa-UES" id="tRO-SS-f4J"/>
+                        <outlet property="lblTime" destination="XfN-MH-x6J" id="IPC-b3-CCM"/>
+                        <outlet property="minutesImage" destination="gAa-pF-AXi" id="kTu-Dx-awj"/>
+                        <outlet property="secondsImage" destination="Vcj-n4-fw7" id="BJh-nP-eyt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="face" width="1200" height="1185"/>
+        <image name="hand_hour" width="24" height="222"/>
+        <image name="hand_minute" width="24" height="222"/>
+        <image name="hand_second" width="24" height="222"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
