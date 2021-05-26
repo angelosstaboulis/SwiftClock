@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet var lblTime: UILabel!
     var date:DateComponents!
     func initClockHands(){
-        self.hourImage.frame = CGRect(x: UIScreen.main.bounds.width/2-15, y: (UIScreen.main.bounds.height/2)-65, width: 30, height: 160)
+        self.hourImage.frame = CGRect(x: (UIScreen.main.bounds.width/2)-15, y: (UIScreen.main.bounds.height/2)-65, width: 30, height: 160)
         self.minutesImage.frame = CGRect(x: UIScreen.main.bounds.width/2-15, y: (UIScreen.main.bounds.height/2)-65, width: 30, height: 160)
         self.secondsImage.frame = CGRect(x: UIScreen.main.bounds.width/2-15, y: (UIScreen.main.bounds.height/2)-65, width: 30, height: 160)
     }
     func updateUI(){
         date = Calendar.current.dateComponents(in:.current , from: Date())
-        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.0
+        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.01
         let minutesAngle = (CGFloat(date.minute!) / 60.0) * CGFloat.pi * 2.0
         let secondsAngle = (CGFloat(date.second!) / 60.0) * CGFloat.pi * 2.0
         self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle))
