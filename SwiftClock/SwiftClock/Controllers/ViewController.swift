@@ -27,10 +27,15 @@ class ViewController: UIViewController {
         self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle))
         self.minutesImage.transform = CGAffineTransform(rotationAngle: CGFloat(minutesAngle))
         self.secondsImage.transform = CGAffineTransform(rotationAngle: CGFloat(secondsAngle))
-        if (date.second! >= 0  && date.second!  <= 9 ){
-            self.lblTime.text = String(date.hour!) + ":" + String(date.minute!) + ":" +  "0"+String(date.second!)
+        if date.second! >= 0  && date.second!<=9 {
+            if date.minute! >= 0  && date.minute! <= 9{
+                self.lblTime.text = String(date.hour!) + ":" + "0"+String(date.minute!) + ":" +  "0"+String(date.second!)
+            }
+            else{
+                self.lblTime.text = String(date.hour!) + ":" + String(date.minute!) + ":" + "0" + String(date.second!)
+            }
         }
-        else if (date.minute! >= 0  && date.minute!  <= 9 ){
+        else if date.minute! >= 0  && date.minute!<=9 {
             self.lblTime.text = String(date.hour!) + ":" + "0" + String(date.minute!) + ":" +  String(date.second!)
         }
         else {
