@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     func updateUI(){
         date = Calendar.current.dateComponents(in:.current , from: Date())
-        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.1
+        let hourAngle = (CGFloat(date.hour!) / 12.0) * CGFloat.pi * 2.0
         let minutesAngle = (CGFloat(date.minute!) / 60.0) * CGFloat.pi * 2.0
         let secondsAngle = (CGFloat(date.second!) / 60.0) * CGFloat.pi * 2.0
         self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle))
