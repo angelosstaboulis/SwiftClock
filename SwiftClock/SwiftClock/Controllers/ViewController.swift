@@ -27,19 +27,22 @@ class ViewController: UIViewController {
         self.hourImage.transform = CGAffineTransform(rotationAngle: CGFloat(hourAngle))
         self.minutesImage.transform = CGAffineTransform(rotationAngle: CGFloat(minutesAngle))
         self.secondsImage.transform = CGAffineTransform(rotationAngle: CGFloat(secondsAngle))
-        if date.second! >= 0  && date.second!<=9 {
-            if date.minute! >= 0  && date.minute! <= 9{
-                self.lblTime.text = String(date.hour!) + ":" + "0"+String(date.minute!) + ":" +  "0"+String(date.second!)
+        guard let hour = date.hour  else {return}
+        guard let minute = date.minute else {return}
+        guard let second = date.second else { return}
+        if second >= 0  && second<=9 {
+            if minute >= 0  && minute <= 9{
+                self.lblTime.text = String(hour) + ":" + "0"+String(minute) + ":" +  "0"+String(second)
             }
             else{
-                self.lblTime.text = String(date.hour!) + ":" + String(date.minute!) + ":" + "0" + String(date.second!)
+                self.lblTime.text = String(hour) + ":" + String(minute) + ":" + "0" + String(second)
             }
         }
-        else if date.minute! >= 0  && date.minute!<=9 {
-            self.lblTime.text = String(date.hour!) + ":" + "0" + String(date.minute!) + ":" +  String(date.second!)
+        else if minute >= 0  && minute <= 9 {
+            self.lblTime.text = String(hour) + ":" + "0" + String(minute) + ":" +  String(second)
         }
         else {
-            self.lblTime.text = String(date.hour!) + ":" + String(date.minute!) + ":" + String(date.second!)
+            self.lblTime.text = String(hour) + ":" + String(minute) + ":" + String(second)
         }
     }
     func fireTimer(){
