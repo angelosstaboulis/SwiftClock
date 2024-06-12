@@ -1,4 +1,4 @@
 # SwiftClock
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-05-26 at 12 26 24](https://user-images.githubusercontent.com/79055304/119637966-deba9c00-be1e-11eb-8aa1-499828941043.png)
 
 This is a small app(analog clock) that i made in Swift to show how Timer works
+![Simulator Screenshot - iPhone 15 Pro - 2024-06-12 at 16 26 57](https://github.com/angelosstaboulis/SwiftClock/assets/79055304/860d37d4-dd2b-479e-a567-b00ed5f7bb8b)
