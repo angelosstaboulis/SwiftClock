@@ -44,9 +44,8 @@ class ViewController: UIViewController {
     }
     func fireTimer(){
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] (timer) in
-            DispatchQueue.main.async {
-                self!.updateUI()
-            }
+            guard let selfNew = self else {return}
+            selfNew.updateUI()
         }.fire()
     }
     override func viewDidLoad() {
